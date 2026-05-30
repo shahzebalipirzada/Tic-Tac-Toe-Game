@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="tic-tac-toe.css">
+</head>
+<body>
+  <main class="game-app" aria-label="Tic Tac Toe game">
+    <section class="game-panel" aria-labelledby="gameTitle">
+      <header class="game-header">
+        <div>
+          <h1 id="gameTitle">Tic Tac Toe</h1>
+          <p class="subtitle">A clean board for two players or a quick match against the computer, with instant restart, clear scoring, and smooth move feedback.</p>
+        </div>
+
+        <div class="mode-switch" role="tablist" aria-label="Game mode">
+          <button id="twoPlayerMode" class="mode-button active" type="button" aria-pressed="true">2 Players</button>
+          <button id="computerMode" class="mode-button" type="button" aria-pressed="false">Vs Computer</button>
+        </div>
+
+        <div class="scoreboard" aria-label="Scoreboard">
+          <div class="score-card">
+            <span>X wins</span>
+            <strong id="scoreX">0</strong>
+          </div>
+          <div class="score-card">
+            <span>Draws</span>
+            <strong id="scoreDraw">0</strong>
+          </div>
+          <div class="score-card">
+            <span>O wins</span>
+            <strong id="scoreO">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="status-bar" aria-live="polite">
+        <div>
+          <span class="status-label">Turn</span>
+          <strong id="turnLabel">X</strong>
+        </div>
+        <p id="statusText">Player X starts.</p>
+      </section>
+
+      <section class="board-shell" aria-label="Game board">
+        <div class="board" id="board" role="grid" aria-label="Tic Tac Toe board"></div>
+      </section>
+
+      <footer class="control-bar" aria-label="Game controls">
+        <button id="restartButton" class="primary-button" type="button">Restart round</button>
+        <button id="resetScoreButton" class="secondary-button" type="button">Reset scores</button>
+      </footer>
+    </section>
+  </main>
+
+  <script src="tic-tac-toe.js"></script>
+</body>
+</html>
